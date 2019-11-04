@@ -1,0 +1,9 @@
+<!--pages/module-a/no-data/no-data.wxml-->
+<view class="no-data-wrapper">
+    <modal show="{{showModal}}">
+        <view class="no-data">
+            <view class="text-1">暂无该账号数据</view>
+            <view class="text-2" bindtap="toSignUp">注册账号，获取更多优惠</view>
+        </view>
+    </modal>
+</view>

@@ -1,0 +1,38 @@
+<view class="msg">
+	<view class="left">
+		<view class="item">姓名：{{info.agenter_name}}</view>
+		<view class="item">电话：{{info.phone}}</view>
+		<view class="item">职位：{{info.position}}</view>
+		<view class="item">公司：{{info.company_name}}</view>
+	</view>
+	<view class="right">超过<text>{{info.percent}}%</text>同行</view>
+</view>
+<view class="menu">
+	<navigator hover-class="none" url="/pages/module-c/data/data">
+		<view class="menu-item">
+			<image src="../../../imgs/module-c/icon-data.png"></image>
+			<text class="menu-name">数据统计</text>
+			<view class="angle"></view>
+		</view>
+	</navigator>
+	<view class="menu-item" bindtap="openShare">
+		<image src="../../../imgs/module-c/icon-share.png"></image>
+		<text class="menu-name">分享小程序</text>
+		<view class="angle"></view>
+	</view>
+	<view class="menu-item" bindtap="logOut">
+		<image src="../../../imgs/module-c/icon-out.png"></image>
+		<text class="menu-name">退出</text>
+		<view class="angle"></view>
+	</view>
+</view>
+
+<modal show="{{showShare}}" height="760rpx" closeByClickModal="{{true}}">
+	<view class="share-content">
+		<image class="big" src="{{xcxImg}}"></image>
+		<image class="small" src="../../../imgs/code-img.jpg"></image>
+		<view>
+			<button bindtap="save">保存图片</button>
+		</view>
+	</view>
+</modal>

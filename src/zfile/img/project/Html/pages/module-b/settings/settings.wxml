@@ -1,0 +1,48 @@
+<view class="container">
+  <!-- <view class="nothing">沛生医药为您服务</view> -->
+  <view class="list">
+    <view class="server-box" wx:if="{{position === 2}}" bindtap="touchToUrl" data-url="/pages/module-b/unbind/unbind">
+      <view class="left">
+        <image class="logo" src="/imgs/module-b/orange_edit.png"></image>
+        <view class="text">申请解绑代理</view>
+      </view>
+      <view class="tri orange"></view>
+    </view>
+
+    <view class="server-box" bindtap="touchShowShare">
+      <view class="left">
+        <image class="logo" src="/imgs/module-b/settings_share_orange.png" wx:if="{{position === 2}}"></image>
+        <image class="logo" src="/imgs/module-b/settings_share_purple.png" wx:else></image>
+        <view class="text">分享小程序</view>
+      </view>
+      <view class="tri {{position === 2 ? 'orange' : 'purple'}}"></view>
+    </view>
+
+    <view class="server-box" bindtap="quit">
+      <view class="left">
+        <image class="logo" src="/imgs/module-b/settings_quit_orange.png" wx:if="{{position === 2}}"></image>
+        <image class="logo" src="/imgs/module-b/settings_quit_purple.png" wx:else></image>
+        <view class="text">退出</view>
+      </view>
+      <view class="right">
+        <view class="tri {{position === 2 ? 'orange' : 'purple'}}"></view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="pop" wx:if="{{showPop}}">
+    <view class="popLayer" bindtap="ifShowPop"></view>
+    <view class="popBox">
+      <image class="img" src="{{xcxImg}}"></image>
+      <image class="code" src="../../../imgs/code-img.jpg"></image>
+      <view>
+        <button class="btn" bindtap="save">保存图片</button>
+      </view>
+    </view>
+  </view>
+
+  <modal show="{{showModal}}" duration="1000">
+    <view class='modal-content'>{{modalText}}</view>
+  </modal>
+</view>

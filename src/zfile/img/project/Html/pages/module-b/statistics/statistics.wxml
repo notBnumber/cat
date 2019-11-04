@@ -1,0 +1,57 @@
+<view class="container">
+    <view class="chart-card">
+      <view class="filter">
+        <view class="filter-item">
+          <picker bindchange="productChange" value="{{productIndex}}" range="{{goods}}" range-key="goods_name">
+            <view class="picker">
+              {{goods[productIndex].goods_name}}
+            </view>
+          </picker>
+        </view>
+        <view class="filter-item">
+          <picker bindchange="timeChange" value="{{timeIndex}}" range="{{timeList}}" range-key="name">
+            <view class="picker">
+              {{timeList[timeIndex].name}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="chart-container">
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+      </view>
+    </view>
+    <view class="title">
+      医生数据明细
+    </view>
+    <view class="tr">
+      <view class="th">时间</view>
+      <view class="th">产品</view>
+      <view class="th">购买量</view>
+      <view class="th">赠送量</view>
+    </view>
+    <view class="tr" wx:for="{{table2List}}" wx:key="{{index}}">
+      <block wx:if="{{item.sale_num || item.song_num}}">
+        <view class="td">{{item.time}}</view>
+        <view class="td">{{item.goods_name}}</view>
+        <view class="td">{{item.sale_num}}</view>
+        <view class="td">{{item.song_num}}</view>
+      </block>
+    </view>
+    <view class="title">
+      代理数据明细
+    </view>
+    <view class="tr">
+      <view class="th">时间</view>
+      <view class="th">产品</view>
+      <view class="th">购买量</view>
+      <view class="th">赠送量</view>
+    </view>
+    <view class="tr" wx:for="{{tableList}}" wx:key="{{index}}">
+      <block wx:if="{{item.sale_num || item.give_num}}">
+        <view class="td">{{item.time}}</view>
+        <view class="td">{{item.goods_name}}</view>
+        <view class="td">{{item.sale_num}}</view>
+        <view class="td">{{item.give_num}}</view>
+      </block>
+    </view>
+  </view>

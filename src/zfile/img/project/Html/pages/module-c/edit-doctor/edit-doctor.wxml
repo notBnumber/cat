@@ -1,0 +1,41 @@
+<view class="container">
+	<view class="form-box">
+		<form bindsubmit="formSubmit">
+			<view class="section">
+				<view class="section-title">姓名:</view>
+				<input type="text" name="name" placeholder="请输入姓名" placeholder-class="placeholder-class" value="{{info.name || ''}}"/>
+			</view>
+
+			<view class="section">
+				<view class="section-title">手机号:</view>
+				<input type="text" name="phone" placeholder="请输入手机号" placeholder-class="placeholder-class" value="{{info.phone || ''}}"/>
+			</view>
+
+			<view class="section" wx:if="{{info.position !== 2}}">
+				<view class="section-title">职位:</view>
+				<radio-group class="radio-group" name="position">
+					<label class="radio">
+						<radio color="#e6e6e6" value="1" checked="{{info.position === 1}}"/>医生
+					</label>
+					<label class="radio">
+						<radio color="#e6e6e6" value="0" checked="{{info.position === 0}}"/>助理
+					</label>
+				</radio-group>
+			</view>
+
+			<view class="btn-area">
+				<button class="submit" wx:if="{{!isEdit}}" formType="submit">新增</button>
+				<button class="submit"  wx:if="{{isEdit}}" formType="submit">保存</button>
+				<button class="delete" wx:if="{{isEdit}}" bindtap="formDelete">删除</button>
+			</view>
+
+		</form>
+
+		<modal show="{{showValidateModal}}" duration="1000">
+			<view class='modal-content'>{{ValidateModalText}}</view>
+		</modal>
+
+	</view>
+
+
+</view>

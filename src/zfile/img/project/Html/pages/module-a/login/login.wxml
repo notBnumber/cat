@@ -1,0 +1,18 @@
+<!--pages/module-a/login/login.wxml-->
+<view class="login-wrapper">
+    <form bindsubmit="submit">
+        <view class="form-item">
+            <input type="number" name="phone" maxlength="11" placeholder="请输入手机号码" bindinput="enterTel" placeholder-class="placeholder-class"></input>
+        </view>
+        <view class="form-item code">
+            <input type="number" name="code" placeholder="请输入验证码" placeholder-class="placeholder-class"></input>
+            <button bindtap="sendCode">{{sendCodeMsg}}</button>
+        </view>
+        <button class="submit-btn" form-type="submit">登录</button>
+    </form>
+    <modal show="{{showModal}}" duration="1000">
+        <view class='modal-content'>
+            {{modalText}}
+        </view>
+    </modal>
+</view>

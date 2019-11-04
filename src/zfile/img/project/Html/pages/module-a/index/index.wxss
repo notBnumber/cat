@@ -1,0 +1,31 @@
+.scan-content {
+    height: 295rpx;
+    box-sizing: border-box;
+    padding: 60rpx 38rpx;
+}
+
+.scan-content .title {
+    color: #000;
+    line-height: 1.5;
+    text-align: left;
+    font-size: 33rpx;
+}
+
+.scan-content .btns {
+    margin-top: 8rpx;
+    text-align: center;
+    line-height: 63rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scan-content .btns button {
+    color: #1AAD19;
+    background: transparent;
+    border: none;
+}
+
+.mask {
+    position: fixed;
+}

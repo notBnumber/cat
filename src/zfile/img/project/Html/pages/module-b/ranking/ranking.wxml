@@ -1,0 +1,25 @@
+<loading hidden="{{showPage}}">
+  加载中...
+</loading>
+<view class="container" wx:if="{{showPage}}">
+  <view class="box">
+    <view class="main-box">
+      <view class="name-box theme-{{position === 2 ? 'orange' : 'purple' }} bg">
+        <text class="name">{{storeName}}</text>
+      </view>
+      <view class="ranking-box clearfloat">
+        <view class="ranking-text">
+          <view class="com">全国第{{rankInfo.cn_rank}}名</view>
+          <view class="com">广东省第{{rankInfo.pr_rank}}名</view>
+          <view class="com">广州市第{{rankInfo.ci_rank}}名</view>
+        </view>
+        <image class="ranking-ico" src="../../../imgs/module-b/ranking_2.png"></image>
+      </view>
+      <view class="code-box">
+          <image class="code" src="../../../imgs/module-b/ranking_code.png" ></image>
+      </view>
+    </view>
+    <button class="share theme-{{position === 2 ? 'orange' : 'purple' }} bg" open-type="share">分享至好友或群组</button>
+  </view>
+
+</view>

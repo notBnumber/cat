@@ -1,0 +1,29 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="container">
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" indicator-color="{{position === 2 ? '#ffb147' : '#906ba1'}}"
+    indicator-active-color="{{position === 2 ? '#fe8417' : '#fe8417'}}">
+    <block wx:for="{{productInfo.img_url}}">
+      <swiper-item class="swiper-item">
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="title">{{productInfo.name}}</view>
+  <view class="desc-wrapper">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+  
+  <modal show="{{showModal}}" duration="1000">
+    <view class='modal-content'>{{modalText}}</view>
+  </modal>
+</view>
+<view class="bom">
+  <view class="bom-txt">数量</view>
+  <view class="num-box">
+    <view class="com icon down" bindtap="touchToChangeNums" data-act="down"> - </view>
+    <view class="com nums">{{productInfo.num}}</view>
+    <view class="com icon up" bindtap="touchToChangeNums" data-act="up"> + </view>
+  </view>
+  <button class="btn clearfloat theme-{{position === 2 ? 'orange' : 'purple'}} bg" bindtap="placeOrder"
+    data-productid="{{productInfo.id}}" data-nums="{{productInfo.num}}">下单</button>
+</view>

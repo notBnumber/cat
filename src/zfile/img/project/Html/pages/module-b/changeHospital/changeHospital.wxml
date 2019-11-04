@@ -1,0 +1,20 @@
+<loading hidden="{{showPage}}">
+  加载中...
+</loading>
+<view class="container" wx:if="{{showPage}}">
+  <block wx:for="{{clerkStores}}" wx:key="id">
+    <view class="items" bindtap="touchToChangeHospital" data-item="{{item}}">
+      <image  class="item-img" src="{{item.store_imgs[0].url}}"></image>
+
+      <view class="item-info">
+        <view class="item-name">{{item.store_name}}</view>
+        <view class="item-addr">
+          <view class="item-addr-text">{{item.province_name}}{{item.city_name}}{{item.area_name}}{{item.address_detail}}
+          </view>
+          <image class="item-addr-img" src="{{addrImg}}"></image>
+        </view>
+      </view>
+      <view class="item-distance"> {{item.distanceText}} </view>
+    </view>
+  </block>
+</view>

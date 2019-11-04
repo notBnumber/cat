@@ -1,0 +1,29 @@
+<loading hidden="{{showPage}}">
+  加载中...
+</loading>
+<view class="container" wx:if="{{showPage}}">
+  <!-- <view class="nothing">沛生医药为您服务</view> -->
+  <view class="list">
+    <button class="server-box" open-type="contact" send-message-title="沛生医药">
+      <view class="left">
+        <image class="logo" src="/imgs/module-b/serve_headset_orange.png" wx:if="{{position === 2}}"></image>
+        <image class="logo" src="/imgs/module-b/serve_headset_purple.png" wx:else></image>
+        <view class="text">在线客服</view>
+      </view>
+      <view class="tri {{position === 2 ? 'orange' : 'purple'}}"></view>
+    </button>
+
+    <view class="server-box" bindtap="makePhoneCall">
+      <view class="left">
+        <image class="logo" src="/imgs/module-b/serve_phone_orange.png" wx:if="{{position === 2}}"></image>
+        <image class="logo" src="/imgs/module-b/serve_phone_purple.png" wx:else></image>
+        <view class="text">客服热线</view>
+      </view>
+      <view class="right">
+        <view class="number theme-{{position === 2 ? 'orange' : 'purple'}} font">{{phone}}</view>
+        <view class="tri {{position === 2 ? 'orange' : 'purple'}}"></view>
+      </view>
+    </view>
+  </view>
+
+</view>

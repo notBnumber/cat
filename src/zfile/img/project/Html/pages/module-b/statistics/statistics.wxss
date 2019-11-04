@@ -1,0 +1,138 @@
+/* pages/module-c/data/data.wxss */
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-container {
+  margin-top: -40rpx;
+  width: 100%;
+  height: 550rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.container {
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-color: #fff;
+  padding-top: 11rpx;
+  padding-bottom: 40rpx;
+}
+
+.chart-card {
+  width: 690rpx;
+  margin: 0 auto;
+  border: 1px solid #BABABA;
+  box-shadow: 0 10rpx 16rpx #eee;
+  border-radius: 12rpx;
+}
+
+.chart-card .filter {
+  display: flex;
+  padding: 33rpx 0;
+  justify-content: space-around;
+}
+
+.chart-card .filter .filter-item {
+  border: 1px solid #ADADAD;
+  height: 50rpx;
+  padding-left: 5rpx;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 26rpx;
+  line-height: 48rpx;
+}
+
+
+.chart-card .filter .filter-item .picker {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 30rpx;
+}
+
+.chart-card .filter .filter-item::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 18rpx solid #000;
+  border-left: 11rpx solid transparent;
+  border-right: 11rpx solid transparent;
+  position: absolute;
+  top: 16rpx;
+  right: 12rpx;
+}
+
+.chart-card .filter .filter-item:nth-child(1) {
+  width: 240rpx;
+}
+
+.chart-card .filter .filter-item:nth-child(2) {
+  width: 240rpx;
+}
+
+.title {
+  color: #FE8417;
+  font-size: 37rpx;
+  margin: 65rpx auto 20rpx;
+  width: 690rpx;
+  font-weight: bold;
+}
+
+.tr {
+  width: 690rpx;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  color: #000;
+  text-align: center;
+  height: 60rpx;
+}
+
+.tr .th {
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.tr .td {
+  font-size: 29rpx;
+  font-weight: 400;
+}
+
+.th:nth-child(1) {
+  width: 30%;
+}
+
+.th:nth-child(2) {
+  width: 30%;
+}
+
+.th:nth-child(3) {
+  width: 20%;
+}
+
+.th:nth-child(4) {
+  width: 20%;
+}
+
+.td:nth-child(1) {
+  width: 30%;
+}
+
+.td:nth-child(2) {
+  width: 30%;
+}
+
+.td:nth-child(3) {
+  width: 20%;
+}
+
+.td:nth-child(4) {
+  width: 20%;
+}
+

@@ -1,0 +1,26 @@
+.theme {
+  font-size: 35rpx;
+  font-weight: 700;
+  margin: 40rpx 0 40rpx 30rpx ;
+
+}
+.banner {
+  width: 690rpx;
+  height: 300rpx;
+  margin: 40rpx 0 0 30rpx;
+  border: 1rpx solid black;
+}
+image {
+  width: 690rpx;
+}
+
+.article {
+  font-size: 30rpx;
+  color: #717171;
+  margin: 30rpx 30rpx;
+}
+
+.article .section {
+  text-indent: 62rpx;
+  text-align: left;
+}

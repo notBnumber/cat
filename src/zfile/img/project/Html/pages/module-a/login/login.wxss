@@ -1,0 +1,59 @@
+/* pages/module-a/login/login.wxss */
+.login-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F3F4F6;
+}
+
+.login-wrapper form {
+    display: block;
+    position: absolute;
+    top: 254rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    width: 692rpx;
+    padding: 82rpx 52rpx;
+    background-color: #fff;
+}
+
+.login-wrapper form .form-item {
+    margin-bottom: 12rpx;
+    position: relative;
+    border: 1px solid #e3e3e3;
+}
+
+.login-wrapper form .form-item.code {
+    padding-right: 160rpx;
+}
+
+.login-wrapper form .form-item input {
+    width: 100%;
+    height: 67rpx;
+    padding-left: 10rpx;
+    font-size: 29rpx;
+}
+
+.login-wrapper form .form-item button {
+    width: 144rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15rpx;
+    font-size: 26rpx;
+    border: 1px solid #AAAAAA;
+    color: #000;
+    padding: 0;
+}
+
+.login-wrapper form .submit-btn {
+    margin-top: 20rpx;
+    border: none;
+    background-color: #FFB147;
+    height: 69rpx;
+    line-height: 69rpx;
+    color: #fff;
+    font-size: 36rpx;
+}

@@ -1,0 +1,71 @@
+<view class="container" wx:if="{{showContain}}">
+  <block wx:if="{{!showNoRes}}">
+    <view class="title theme-{{position === 2 ? 'orange' : 'purple'}} font">本次扫码获得优惠</view>
+
+    <block wx:for="{{couponList}}" wx:key="{{index}}">
+      <view class="discount-box theme-{{position === 2 ? 'orange' : 'purple'}} bg">
+        <view class="discount-in-box">
+          <view class="left">
+            <view class="name">（买{{item.x}}赠{{item.y}}）{{item.product_name_code}}</view>
+            <view class="tips-box">
+              <view class="tips-head">使用说明：</view>
+              <view class="tips-info">{{item.desc}}</view>
+            </view>
+            <view class="deadline">使用期限：{{item.start_time}}~{{item.end_time}}</view>
+          </view>
+          <view class="right">
+            <text class="text">×{{item.matchNum}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <view class="sweep-res-box">
+
+      <view class="sweep-info-box">
+        <view class="com">扫描结果</view>
+        <view class="com">扫描时间：{{time}}</view>
+        <view class="com">扫描地址：{{address}}</view>
+        <view class="com">本次销量：+{{amount}}</view>
+      </view>
+
+      <view class="product-box" wx:for="{{productList}}" wx:key="{{index}}">
+        <image class="banner" src="{{item.img_url}}"></image>
+        <view class="info">
+          <view class="name">{{item.goods_name}}</view>
+        </view>
+        <view class="nums theme-{{position === 2 ? 'orange' : 'purple'}} font">×{{item.amount}}</view>
+      </view>
+
+    </view>
+
+    <view class="pop" wx:if="{{showPop}}">
+      <view class="popLayer"></view>
+      <view class="popBox">
+        <view class="content-box">
+          <view class="title">药品名称</view>
+
+          <view class="detail-box">
+            <image class="pic" src="{{currProduct.img_url}}"></image>
+            <view class="info">
+              <view class="name">{{currProduct.goods_name}}</view>
+              <view class="nums">×{{currProduct.amount}}</view>
+            </view>
+          </view>
+
+        </view>
+        <view class="btn-box">
+          <button bindtap="closePop" class="btn theme-{{position === 2 ? 'orange' : 'purple'}} bg">结束扫码</button>
+          <button bindtap="scanCode" class="btn theme-{{position === 2 ? 'orange' : 'purple'}} bg">继续扫码</button>
+        </view>
+      </view>
+    </view>
+
+  </block>
+
+  <view class="no-res-box" wx:if="{{showNoRes}}">
+    <view class="text">无相关结果，请</view>
+    <view bindtap="scanCode" class="navigator theme-{{position === 2 ? 'orange' : 'purple'}} font">重新扫描</view>
+  </view>
+
+</view>

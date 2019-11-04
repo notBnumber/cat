@@ -1,0 +1,4 @@
+<!-- <!doctype wxml> -->
+<view class="container">
+  <web-view src="{{outUrl}}"></web-view>
+</view>

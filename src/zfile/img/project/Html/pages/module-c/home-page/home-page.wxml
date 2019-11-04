@@ -1,0 +1,50 @@
+<!--pages/module-c/home-page/home-page.wxml-->
+<view class="main-card">
+    <view class="content">
+        <text>医院：</text>
+        <text class="name">{{selected.store_name || '请选择医院'}}</text>
+        <navigator hover-class="none" url="/pages/module-c/select-hosipital/select-hosipital">
+        <view class="angle-wrapper">
+          <text class="angle" wx:if="{{hospitalList.length < 1}}"></text>
+        </view>
+        </navigator>
+    </view>
+    <image src="../../../imgs/module-c/scan.png" bindtap="scan"></image>
+</view>
+
+<view class="service">
+    <view class="title">
+        <text>服务</text>
+        <text class="small">Service</text>
+    </view>
+    <view class="content">
+        <!-- <navigator hover-class="none" url="/pages/module-c/hosipital-manage/hosipital-manage">
+            <view class="card">
+                <view class="left">
+                    <view>医院管理</view>
+                    <view class="small">Hospital management</view>
+                </view>
+                <image src="../../../imgs/module-c/icon-manage.png"></image>
+            </view>
+        </navigator>
+        <navigator hover-class="none" url="/pages/module-c/notice/notice">
+            <view class="card">
+                <view class="left">
+                    <view>通知</view>
+                    <view class="small">Notice</view>
+                </view>
+                <image src="../../../imgs/module-c/icon-msg.png"></image>
+                <view class="red" wx:if="{{hasNotice}}"></view>
+            </view>
+        </navigator> -->
+        <navigator hover-class="none" url="/pages/module-c/my/my">
+            <view class="card">
+                <view class="left">
+                    <view>我的</view>
+                    <view class="small">Personal message</view>
+                </view>
+                <image src="../../../imgs/module-c/icon-member.png"></image>
+            </view>
+        </navigator>
+    </view>
+</view>

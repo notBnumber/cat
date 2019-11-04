@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="search-warp">
+    <input type="text" placeholder="请输入医院名称关键字" bindfocus="doSearch" bindinput="onInput" value="{{searchStr}}" confirm-type="search"/>
+    <text class="search-cancel"  bindtap="cancelSearch" >取消</text>
+  </view>
+
+    <view class="items" wx:if="{{list.length>0}}" wx:for="{{list}}" wx:key="{{index}}" data-index="{{index}}" bindtap="select">
+        <image class="item-img" src="{{item.store_imgs[0].url}}"></image>
+        <view class="item-info">
+            <view class="item-name">{{item.store_name}}</view>
+            <view class="item-addr">
+                <view class="item-addr-text clearfloat">{{item.address_detail}}
+                    <image class="item-addr-img clearfloat" src="../../../imgs/module-c/addr_1.png" bindtap="showMap" data-index="{{index}}"></image>
+                </view>
+            </view>
+        </view>
+        <view class="item-right"> 
+            <view class="item-youhui">剩余 {{item.give_num}}</view>
+            <view class="item-distance">{{item.distanceText}}</view>
+        </view>
+    </view>
+
+  <view class="nodata" wx:if="{{list.length==0}}">
+    <text>暂无数据</text>
+  </view>
+</view>

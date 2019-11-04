@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="wrap">
+    <form bindsubmit="formSubmit">
+      <textarea class="textarea" name="desc" placeholder="请详细描述申请代理解绑的原因"
+        placeholder-style="color: #dedede;"></textarea>
+
+      <view class="img-list">
+
+        <block wx:for="{{imgList}}" wx:key="{{item.img_id}}">
+          <view class="img-item" bindtap="uploadImage" data-index="{{index}}">
+            <image src="{{item.img_url}}" wx:if="{{item.img_url}}"></image>
+            <view class="del" wx:if="{{item.img_id}}" data-index="{{index}}" catchtap="delImg">-</view>
+            <text>+</text>
+          </view>
+        </block>
+
+      </view>
+
+      <button form-type="submit" class="btn">提交申请</button>
+    </form>
+
+    <modal show="{{showModal}}"  duration="1000">
+      <view class='modal-content'>
+        {{modalText}}
+      </view>
+    </modal>
+
+  </view>
+</view>

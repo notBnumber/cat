@@ -1,0 +1,140 @@
+.swiper {
+    width: 100%;
+    height: 421rpx;
+    background-color: #fff;
+}
+.swiper .banner {
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    box-sizing: border-box;
+    padding: 52rpx 28rpx 39rpx;
+    width: 100%;
+    background-color: #fff;
+}
+
+.info .hospital {
+    display: flex;
+}
+
+.info .hospital .left {
+    flex: 1 1 auto;
+}
+
+.info .hospital .right {
+    flex: 0 0 auto;
+    width: 68rpx;
+    height: 68rpx;
+    margin-top: 113rpx;
+}
+
+.info .hospital .name {
+    font-size: 40rpx;
+    font-weight: bold;
+    line-height: 39rpx;
+    color: #000;
+}
+
+.info .hospital .addr {
+    margin-top: 54rpx;
+    font-size: 32rpx;
+    line-height: 31rpx;
+    color: #000;
+}
+
+.info .hospital .addr .addr-text {
+    margin-right: 11rpx;
+}
+
+.info .hospital .addr .addr-img {
+    width: 31rpx;
+    height: 36rpx;
+}
+
+.info .hospital .others {
+    margin-top: 22rpx;
+    font-size: 32rpx;
+    line-height: 30rpx;
+    font-weight: 400;
+    color: #000;
+}
+
+.info .doctor {
+    margin-top: 23rpx;
+    border-top: 1rpx solid #1b1b1b;
+}
+
+.info .doctor .title-box {
+    line-height: 35rpx;
+    margin-top: 24rpx;
+    font-size: 38rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info .doctor .title-box .title {
+    font-weight: 500;
+}
+
+.info .doctor .title-box .btn {
+    font-weight: bold;
+    color: #FFB147;
+}
+
+.info .doctor .edit-img {
+    width: 35rpx;
+    height: 35rpx;
+}
+
+.tr {
+    display: flex;
+    width: 100%;
+}
+.th {
+    font-size: 32rpx;
+    font-weight: 500;
+    line-height: 30rpx;
+    margin-top: 36rpx;
+    text-align: center;
+}
+
+.th:nth-child(1) {
+    width: 25%
+}
+
+.th:nth-child(2) {
+    width: 20%
+}
+
+.th:nth-child(3) {
+    width: 40%
+}
+
+.th:nth-child(4) {
+    width: 15%
+}
+
+.td:nth-child(1) {
+    width: 25%
+}
+
+.td:nth-child(2) {
+    width: 20%
+}
+
+.td:nth-child(3) {
+    width: 40%
+}
+
+.td:nth-child(4) {
+    width: 15%
+}
+
+.td {
+    text-align: center;
+    font-size: 32rpx;
+    line-height: 30rpx;
+    margin-top: 24rpx;
+}

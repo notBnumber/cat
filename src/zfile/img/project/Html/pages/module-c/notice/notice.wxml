@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="items" wx:for="{{list}}" wx:key="{{item.id}}">
+        <image class="item-img" src="{{item.product_img_url[0]}}"></image>
+        <view class="item-info">
+            <view class="item-name">
+                <text>{{item.clerkInfo.name}}</text>
+                <text>{{item.clerkInfo.phone}}</text>
+            </view>
+            <view class="item-addr">{{item.store_name}}</view>
+            <view class="item-time">{{item.created_at}}</view>
+        </view>
+        <view class="item-distance">
+            <view>X{{item.num}}</view>
+            <button bindtap="handle" data-index="{{index}}" wx:if="{{!item.finish}}">落实</button>
+            <button class="finished" wx:else>已落实</button>
+        </view>
+    </view>
+</view>

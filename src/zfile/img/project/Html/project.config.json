@@ -1,0 +1,174 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wx30e16dbfbad84a7d",
+	"projectname": "peisheng",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": 6,
+			"list": [
+				{
+					"id": -1,
+					"name": "module-b-index",
+					"pathName": "pages/module-b/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "module-b-changeHospital",
+					"pathName": "pages/module-b/changeHospital/changeHospital",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "module-b-doctorInfo",
+					"pathName": "pages/module-b/doctorInfo/doctorInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "module-b-ranking",
+					"pathName": "pages/module-b/ranking/ranking",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "module-b-sweep",
+					"pathName": "pages/module-b/sweep/sweep",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "module-a/login/login",
+					"pathName": "pages/module-a/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "moudle-b-serve",
+					"pathName": "pages/module-b/serve/serve",
+					"scene": null
+				}
+			]
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/module-c/home-page/home-page",
+					"pathName": "pages/module-c/home-page/home-page",
+					"query": "index=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "module-b-index",
+					"pathName": "pages/module-b/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "module-b-doctorInfo",
+					"pathName": "pages/module-b/doctorInfo/doctorInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "module-b-coupon",
+					"pathName": "pages/module-b/coupon/coupon",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "module-b-order",
+					"pathName": "pages/module-b/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "module-b-productId",
+					"pathName": "pages/module-b/productDetail/productDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "module-b/changeHospital",
+					"pathName": "pages/module-b/changeHospital/changeHospital",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "module-b-ranking",
+					"pathName": "pages/module-b/ranking/ranking",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "module-b-settings",
+					"pathName": "pages/module-b/settings/settings",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "module-b-unbind",
+					"pathName": "pages/module-b/unbind/unbind",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "module-b-statistics",
+					"pathName": "pages/module-b/statistics/statistics",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

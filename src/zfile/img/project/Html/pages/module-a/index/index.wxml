@@ -1,0 +1,8 @@
+<!--<modal show="{{showModal}}" height="295rpx">-->
+    <!--<view class="scan-content">-->
+        <!--<view class="title">需要获取您的位置信息，请到小程序的设置中打开地理位置授权</view>-->
+        <!--<view class="btns">-->
+            <!--<button bindtap="openSetting">打开设置</button>-->
+        <!--</view>-->
+    <!--</view>-->
+<!--</modal>-->

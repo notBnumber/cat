@@ -1,0 +1,38 @@
+<view class="no-result" wx:if="{{productList.length === 0 && noResult}}">
+	无相关结果，请<text bindtap="scan">重新扫码</text>
+</view>
+
+<view class="content" wx:if="{{productList.length}}">
+	<view class="result">
+		<view>扫描结果</view>
+		<view>扫描时间：{{time}}</view>
+		<view>扫描地址：{{address}}</view>
+		<view>本次销量：+{{amount}}</view>
+		<view class="list">
+			<view class="item" wx:for="{{productList}}" wx:key="{{index}}">
+				<image src="{{item.imgUrl}}"></image>
+				<view class="desc">
+					<view>{{item.name}}</view>
+				</view>
+				<view class="amount">X{{item.amount}}</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<modal show="{{showModal && productList.length}}" height="295rpx">
+	<view class="scan-content">
+		<view class="title">药品名称</view>
+		<view class="msg">
+			<image src="{{currProduct.imgUrl}}"></image>
+			<view class="desc">
+				<view class="name">{{currProduct.name}}</view>
+				<view class="amount">X{{currProduct.amount}}</view>
+			</view>
+		</view>
+		<view class="btns">
+			<button bindtap="closeModal">结束扫码</button>
+			<button bindtap="scan">继续扫码</button>
+		</view>
+	</view>
+</modal>

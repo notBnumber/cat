@@ -1,0 +1,78 @@
+.items {
+    box-sizing: border-box;
+    height: 183rpx;
+    width: 728rpx;
+    margin: 12rpx auto;
+    padding: 0 25rpx 0 24rpx;
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 20rpx;
+    position: relative;
+}
+
+.items .item-img {
+    margin-top: 26rpx;
+    width: 163rpx;
+    height: 132rpx;
+    margin-right: 16rpx;
+    border: 1px solid #fff;
+    border-radius: 10rpx;
+}
+
+.items .item-info {
+    flex: 1 1 auto;
+    margin-top: 33rpx;
+}
+
+.items .item-info .item-name {
+    font-size: 29rpx;
+    line-height: 28rpx;
+    color: #2E303A;
+    margin-bottom: 28rpx;
+}
+
+.items .item-info .item-name text:last-child {
+    padding-left: 67rpx;
+}
+
+.items .item-info .item-addr {
+    display: flex;
+    line-height: 28rpx;
+    color: #2E303A;
+    font-size: 29rpx;
+}
+
+.items .item-time {
+    color: #8c8c8c;
+    line-height: 22rpx;
+    font-size: 24rpx;
+    margin-top: 19rpx;
+}
+
+.items .item-distance view {
+    margin-top: 63rpx;
+    text-align: right;
+    color: #000;
+    font-weight: bold;
+    line-height: 32rpx;
+    font-size: 29rpx
+}
+
+.items .item-distance button {
+    margin-top: 36rpx;
+    width: 92rpx;
+    height: 38rpx;
+    background-color: #FFB147;
+    border-radius: 7rpx;
+    color: #fff;
+    font-size: 26rpx;
+    padding: 0;
+    line-height: 38rpx;
+    border: none;
+}
+
+.items .item-distance button.finished {
+    background-color: #C4C4C4;
+    color: #8E8E8E;
+}

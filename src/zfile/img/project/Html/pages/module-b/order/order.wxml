@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="detail-box">
+
+    <view class="head-box">
+      <view class="hospital-name">{{clerkStore.store_name}}</view>
+      <view class="agent-info">
+        <view class="com">代理：{{clerkStore.agenter_name}}</view>
+        <view class="com">手机：{{clerkStore.agenter_phone}}</view>
+      </view>
+    </view>
+
+    <block wx:for="{{productList}}" wx:for-item="item" wx:for-index="index" wx:key="unique">
+      <view class="items-box clearfloat">
+
+        <swiper class="swiper" autoplay indicator-dots="{{item.img_url.length > 1}}" autoplay="true" interval="5000"  bindtap="touchToUrl" data-url="/pages/module-b/productDetail/productDetail" data-product_id="{{item.id}}"
+        indicator-color="{{indicatorColor.origin}}" indicator-active-color="{{indicatorColor.active}}">
+          <block wx:for="{{item.img_url}}" wx:for-item="subitem" wx:key="unique">
+            <swiper-item class="swiper-item">
+              <image src="{{subitem}}" class="slide-image"/>
+            </swiper-item>
+          </block>
+        </swiper>
+
+        <view class="item-name">{{item.name}}</view>
+        <view class="item-num-box">
+          <view class="com icon down" bindtap="touchToChangeNums" data-act="down" data-index="{{index}}">-</view>
+          
+          <view class="com nums">{{item.num}}</view>
+
+          <view class="com icon up" bindtap="touchToChangeNums" data-act="up" data-index="{{index}}">+</view>
+          <button class="btn theme-{{position === 2 ? 'orange' : 'purple'}} bg" 
+            bindtap="placeOrder" data-productid="{{item.id}}" data-nums="{{item.num}}">下单</button>
+        </view>
+      </view>
+
+    </block>
+
+  </view>
+  <modal show="{{showModal}}" duration="1000">
+    <view class='modal-content'>{{modalText}}</view>
+  </modal>
+
+
+</view>

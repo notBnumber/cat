@@ -1,0 +1,102 @@
+<loading hidden="{{showPage}}">
+    加载中...
+</loading>
+<view class="container theme-{{position === 2 ? 'orange' : 'purple'}} font" wx:if="{{showPage}}">
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" indicator-color="{{theme.indicatorColor.origin}}"
+        indicator-active-color="{{theme.indicatorColor.active}}" circular="true">
+        <swiper-item class="swiper-item"  bindtap="touchToUrl" data-url="/pages/module-b/doctorInfo/doctorInfo">
+            <view class="top theme-{{position === 2 ? 'orange' : 'purple'}} bg">
+                <view class="hospital">医院：{{clerkStore.store_name}}</view>
+                <view class="tips" catchtap="touchToUrl" data-url="/pages/module-b/changeHospital/changeHospital" wx:if="{{storeNum > 1}}">
+                    更换
+                </view>
+            </view>
+            <view class="bom">
+                <view class="doctor">
+                    <view>姓名：{{clerkStore.clerkName}}</view>
+                    <view>职位：{{clerkStore.positionName}}</view>
+                </view>
+                <view class='progress_box' catchtap="touchToUrl" data-url="/pages/module-b/ranking/ranking">
+                    <!-- 绘制圆环背景 -->
+                    <canvas class="progress_bg" canvas-id="canvasProgressbg" />
+                    <!-- 绘制加载中圆弧 -->
+                    <canvas class="progress_canvas" canvas-id="canvasProgress" />
+                    <!-- 绘制圆弧中心提示文字 -->
+                    <view class="progress_text">
+                        <text class='progress_info'>{{rankInfo.circleText.top}}</text>
+                        <text class="'progress_percent'">{{rankInfo.circleText.mid}}</text>
+                        <text class='progress_info'>{{rankInfo.circleText.bom}}</text>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+        <swiper-item class="swiper-item" bindtap="touchToUrl" wx:for="{{adList}}" wx:key="id" data-url="/pages/module-b/ad/ad?url={{item.redirect_url}}">
+            <scroll-view scroll-y wx:for="{{item.img_url}}" wx:for-item="imgItem" wx:for-index="key" wx:key="key">
+                <image src="{{imgItem}}" class="ads-img"></image>
+            </scroll-view>
+        </swiper-item>
+
+    </swiper>
+    <view class="options">
+        <view class="tab">
+            <view class="tab-cn">服务</view>
+            <view class="tab-en">Service</view>
+        </view>
+        <view class="options-list">
+            <view class="{{position !== 2 ? 'spe' : 'com'}}" bindtap="sweep">
+
+                <image class="com-bg" src="{{position !== 2 ? theme.imgList.bgUrl.spe : theme.imgList.bgUrl.project}}"></image>
+                <view class="com-float">
+                    <view class="{{position === 2 ? 'com' : 'spe'}}-cn">扫一扫</view>
+                    <view class="{{position === 2 ? 'com' : 'spe'}}-en">Sweep code</view>
+                    <image class="{{position === 2 ? 'com' : 'spe'}}-ico" src="{{theme.imgList.icoUrl.sweep}}"></image>
+                </view>
+
+            </view>
+            <view class="com" bindtap="touchToUrl" data-url="/pages/module-b/coupon/coupon">
+                <image class="com-bg" src="{{position !== 2 ? theme.imgList.bgUrl.spe : theme.imgList.bgUrl.project}}"></image>
+                <view class="com-float">
+                    <view class="com-cn">优惠券</view>
+                    <view class="com-en">Coupon</view>
+                    <image class="com-ico" src="{{theme.imgList.icoUrl.coupon}}"></image>
+                </view>
+            </view>
+            <view class="com" bindtap="touchToUrl" data-url="/pages/module-b/order/order">
+                <image class="com-bg" src="{{position !== 2 ? theme.imgList.bgUrl.spe : theme.imgList.bgUrl.project}}"></image>
+                <view class="com-float">
+                    <view class="com-cn">下单</view>
+                    <view class="com-en">Place an order</view>
+                    <image class="com-ico" src="{{theme.imgList.icoUrl.order}}"></image>
+                </view>
+            </view>
+            <view class="com" bindtap="touchToUrl" data-url="/pages/module-b/serve/serve">
+                <image class="com-bg" src="{{position !== 2 ? theme.imgList.bgUrl.spe : theme.imgList.bgUrl.project}}"></image>
+                <view class="com-float">
+                    <view class="com-cn">客服</view>
+                    <view class="com-en">Customer service</view>
+                    <image class="com-ico" src="{{theme.imgList.icoUrl.service}}"></image>
+                </view>
+            </view>
+            <view class="com" wx:if="{{position === 2}}" bindtap="touchToUrl" data-url="/pages/module-b/statistics/statistics">
+                <image class="com-bg" src="{{position !== 2 ? theme.imgList.bgUrl.spe : theme.imgList.bgUrl.project}}"></image>
+                <view class="com-float">
+                    <view class="com-cn">数据分析</view>
+                    <view class="com-en">data</view>
+                    <image class="com-ico" src="{{theme.imgList.icoUrl.statistics}}"></image>
+                </view>
+            </view>
+            <view class="com" bindtap="touchToUrl" data-url="/pages/module-b/settings/settings">
+                <image class="com-bg" src="{{position !== 2 ? theme.imgList.bgUrl.spe : theme.imgList.bgUrl.project}}"></image>
+                <view class="com-float">
+                    <view class="com-cn">设置</view>
+                    <view class="com-en">Settings</view>
+                    <image class="com-ico" src="{{theme.imgList.icoUrl.settings}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!-- <modal show="{{showModal}}" duration="1000">
+        <view class='modal-content'>{{modalText}}</view>
+    </modal> -->
+</view>

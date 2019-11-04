@@ -1,0 +1,57 @@
+.container {
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding-top: 22rpx;
+}
+
+.form-box {
+    margin: 0 auto;
+    width: 692rpx;
+}
+
+.form-box .section {
+    height: 67rpx;
+    line-height: 67rpx;
+    margin-top: 24rpx;
+    font-size: 32rpx;
+    display: flex;
+    align-items: center;
+}
+
+.form-box .section input {
+    border: 1px solid #a0a0a0;
+    flex: 1 1 auto;
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 10rpx;
+}
+
+.form-box .section .section-title {
+    width: 120rpx;
+    flex: 0 0 auto;
+}
+
+.btn-area {
+    padding-top: 35rpx;
+}
+.btn-area button {
+    margin: 23rpx auto 0;
+    width: 100%;
+    height: 69rpx;
+    box-sizing: border-box;
+    line-height: 69rpx;
+    text-align: center;
+    padding: 0;
+    border-radius: 5rpx;
+    font-size: 36rpx;
+}
+.btn-area .submit {
+    color: #fff;
+    background-color: #FFB147;
+}
+.btn-area .delete {
+    color: #FFB147;
+    background-color: #fff;
+    border: 1px solid #FFE0B6;
+}

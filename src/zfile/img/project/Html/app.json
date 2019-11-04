@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/module-a/index/index",
+    "pages/module-a/login/login",
+    "pages/module-a/no-data/no-data",
+    "pages/module-a/sign-up/sign-up"
+  ],
+  "subpackages": [
+    {
+      "root": "pages/module-b",
+      "name": "module-b",
+      "pages": [
+        "index/index",
+        "ad/ad",
+        "doctorInfo/doctorInfo",
+        "editDoctor/editDoctor",
+        "changeHospital/changeHospital",
+        "order/order",
+        "ranking/ranking",
+        "coupon/coupon",
+        "statistics/statistics",
+        "sweep/sweep",
+        "serve/serve",
+        "settings/settings",
+        "productDetail/productDetail",
+        "unbind/unbind"
+      ]
+    },
+    {
+      "root": "pages/module-c",
+      "name": "module-c",
+      "pages": [
+        "home-page/home-page",
+        "select-hosipital/select-hosipital",
+        "scan-out/scan-out",
+        "notice/notice",
+        "scan-result/scan-result",
+        "hosipital-manage/hosipital-manage",
+        "edit-hospital/edit-hospital",
+        "hospital-info/hospital-info",
+        "edit-doctor/edit-doctor",
+        "my/my",
+        "data/data"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "沛生医药",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于判断当前位置和医院的距离"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

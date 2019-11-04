@@ -1,0 +1,63 @@
+/**app.wxss**/
+
+page {
+  background-color: #F3F4F6;
+}
+
+.placeholder-class {
+  color: rgb(162,159,159);
+}
+
+.angle {
+  width: 23rpx;
+  height: 23rpx;
+  display: inline-block;
+  border-bottom: 4rpx solid #fff;
+  border-right: 4rpx solid #fff;
+  transform: rotate(-45deg);
+}
+
+button::after{
+  border: none;
+}
+
+/*清除浮动代码*/
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfloat{zoom:1;clear:both}
+
+.theme-purple.font{
+  color: #652e81;
+}
+.theme-purple.bg{
+  background-color: #906ba1;
+}
+.theme-orange.font{
+  color: #fb9a17;
+}
+.theme-orange.bg{
+  background-color: #ffb147;
+}
+
+radio-group label{
+  margin-right: 20rpx;
+}
+radio .wx-radio-input {
+  width: 24rpx;
+  height: 24rpx;
+}
+radio .wx-radio-input.wx-radio-input-checked::before {
+  content: "";
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  font-family:"iconfont" !important;
+  font-size: 20rpx;
+  color: #fff;
+  background-color: #7d7d7d;
+  top: 2rpx;
+  left: 2rpx;
+  right:0rpx;
+  bottom:0rpx;
+  transform:translate(0, 0) scale(1);
+  -webkit-transform:translate(0, 0) scale(1);
+  }

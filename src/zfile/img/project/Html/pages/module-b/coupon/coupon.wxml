@@ -1,0 +1,45 @@
+<view class="container">
+  <!--Tab布局-->
+  <view class="title">
+    <view class='titleSel' bindtap='titleClick' data-idx='0'>
+      <text class="{{0 == currentIndex ? 'theme-' + themeColor : ''}} font">全部</text>
+      <hr class="{{0 == currentIndex ? 'headerLineSel bg theme-' + themeColor : 'headerLineUnsel'}}" />
+    </view>
+
+    <view class='titleSel' bindtap='titleClick' data-idx='1'>
+      <text class="{{1 == currentIndex ? 'theme-' + themeColor : ''}} font">未使用</text>
+      <hr class="{{1 == currentIndex ? 'headerLineSel bg theme-' + themeColor : 'headerLineUnsel'}}" />
+    </view>
+
+    <view class='titleSel' bindtap='titleClick' data-idx='2'>
+      <text class="{{2 == currentIndex ? 'theme-' + themeColor : ''}} font">已使用</text>
+      <hr class="{{2 == currentIndex ? 'headerLineSel bg theme-' + themeColor : 'headerLineUnsel'}}" />
+    </view>
+
+  </view>
+
+  <loading hidden="{{showPage}}">
+    加载中...
+  </loading>
+
+  <!--内容布局-->
+  <swiper class='swiper'>
+    <swiper-item class='swiper' wx:if="showPage">
+      <block wx:for="{{couponList}}" wx:key="{{item.id}}">
+        <view  wx:if="{{item.id}}" class="couponlist-box {{item.status === '未使用' ? (item.dateValid === 1 ? 'overdued' : 'unused') : 'used'}} clearfloat">
+          <view class="detail-box">
+            <view class="productinfo-box">
+              <view class="name">（{{item.type}}）{{item.goods_name}}</view>
+              <view class="mark-box">
+                <view class="mark">使用说明：</view>
+                <view class="info">{{item.desc}}</view>
+              </view>
+              <view class="deadline">使用期限：{{item.start_time}} ~ {{item.end_time}}</view>
+            </view>
+            <view class="status">{{item.status === '未使用' ? (item.dateValid === 1 ? '已过期' : item.status) : item.status}}</view>
+          </view>
+        </view>
+      </block>
+    </swiper-item>
+  </swiper>
+</view>

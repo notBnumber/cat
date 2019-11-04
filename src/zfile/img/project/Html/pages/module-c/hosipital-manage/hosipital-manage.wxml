@@ -1,0 +1,49 @@
+<view class="menu">
+	<button class="type-btn {{showType === 1 ? 'active' : ''}}" data-index="{{1}}" bindtap="changeType">地图模式</button>
+	<button class="type-btn {{showType === 2 ? 'active' : ''}}" data-index="{{2}}" bindtap="changeType">列表模式</button>
+	<navigator hover-class="none" url="/pages/module-c/edit-hospital/edit-hospital">
+		<button class="add-btn">新增</button>
+	</navigator>
+</view>
+
+<view wx:if="{{showType === 1 && longitude}}">
+	<map longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" scale="16" bindmarkertap="updateDetail"></map>
+
+	<navigator hover-class="none" url="/pages/module-c/hospital-info/hospital-info?id={{detail.id}}">
+		<cover-view class="map-detail" wx:if="{{detail}}">
+			<cover-image src="{{detail.store_imgs[0].url}}"></cover-image>
+			<cover-view class="msg">
+				<cover-view class="name">{{detail.store_name}}</cover-view>
+				<cover-view class="address">
+					<cover-view>地址：</cover-view>
+					<cover-view>{{detail.address_detail}}</cover-view>
+				</cover-view>
+				<cover-view class="amount">总下单量：{{detail.buy_num}}</cover-view>
+			</cover-view>
+			<cover-image src="../../../imgs/module-c/angle-right.png" class="angle-img">
+			</cover-image>
+		</cover-view>
+	</navigator>
+</view>
+
+<scroll-view scroll-y="{{true}}" class="list-wrapper" wx:if="{{showType !== 1}}">
+	<view class="content">
+		<navigator hover-class="none" url="/pages/module-c/hospital-info/hospital-info?id={{item.id}}" wx:for="{{list}}" wx:key="{{item.id}}">
+			<view class="item">
+				<image src="{{item.store_imgs[0].url}}"></image>
+				<view class="msg">
+					<view class="name">{{item.store_name}}</view>
+					<view class="address">
+						<text>{{item.address_detail}}</text>
+						<image src="../../../imgs/module-c/addr_1.png" data-index="{{index}}"
+							   catchtap="showMap"></image>
+					</view>
+				</view>
+				<view class="angle"></view>
+			</view>
+		</navigator>
+	</view>
+	<view class="no-more">
+		已经到底了
+	</view>
+</scroll-view>

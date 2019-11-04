@@ -1,0 +1,23 @@
+/* pages/module-a/no-data/no-data.wxss */
+
+.no-data {
+    height: 100%;
+    width: 100%;
+    padding: 94rpx 90rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.no-data .text-1 {
+    font-size: 31rpx;
+    line-height: 29rpx;
+}
+
+.no-data .text-2 {
+    font-size: 35rpx;
+    line-height: 36rpx;
+    color: rgb(255,177,71);
+    font-weight: bold;
+}

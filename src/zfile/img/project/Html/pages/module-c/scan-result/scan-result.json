@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "modal": "../../../components/modal/modal"
+  },
+  "navigationBarTitleText": "扫描结果"
+}

@@ -1,0 +1,7 @@
+.msg {
+    font-size: 36rpx;
+    color: #000;
+    margin-top: 439rpx;
+    text-align: center;
+    font-weight: bold;
+}

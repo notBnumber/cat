@@ -1,0 +1,111 @@
+.container {
+  min-height: 100vh;
+  
+}
+.list {
+  border-bottom: 1rpx solid #c4c4c4;
+}
+.server-box {
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left {
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+}
+.logo {
+  width: 42rpx;
+  height: 42rpx;
+}
+.text {
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.number {
+  font-size: 30rpx;
+}
+.tri {
+  position: relative;
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 20rpx;
+}
+.tri::after {
+  content: " ";
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 4rpx 4rpx 0 0;
+  /* border-color: #c7c7cc; */
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  right: 6rpx;
+  margin-top: -9rpx;
+}
+.purple::after {
+  border-color: #9774a7;
+}
+.orange::after {
+  border-color: #ffb147;
+}
+.popLayer {
+  width: 100%;
+  height: 100%;
+  background-color: #B3B3B3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  -moz-opacity: 0.8;
+  opacity:.80;
+  filter: alpha(opacity=80);/* 只支持IE6、7、8、9 */
+}
+.popBox {
+  background-color: #FFFFFF;
+  z-index: 11;
+  width: 560rpx;
+  height: 860rpx;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 20rpx;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.popBox .img {
+  width: calc(100% - 100rpx);
+  margin: 40rpx auto;
+}
+.popBox .code {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 40rpx auto;
+}
+.btn {
+  color: #fff;
+  background-color: #ffb147;
+  height: 60rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  width: calc(100% - 100rpx);
+  margin: 30rpx auto;
+}
+

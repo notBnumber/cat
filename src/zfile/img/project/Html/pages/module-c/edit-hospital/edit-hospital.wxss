@@ -1,0 +1,139 @@
+.title {
+    margin-top: 10rpx;
+    color: #FE8417;
+    padding: 14rpx 16rpx;
+    font-size: 36rpx;
+    background-color: #fff;
+    border-top-left-radius: 7rpx;
+    border-top-right-radius: 7rpx;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.content {
+    background-color: #fff;
+    border-radius: 10rpx;
+    border-top-left-radius: 0;
+}
+
+form {
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+    width: 726rpx;
+}
+
+form .form-item {
+    padding: 12rpx 17rpx 12rpx 21rpx;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+form .form-item image {
+    width: 50rpx;
+    height: 47rpx;
+    margin: 0 2rpx 0 7rpx;
+}
+
+form .form-item .label {
+    font-size: 32rpx;
+    color: #000;
+    font-weight: bold;
+    line-height: 67rpx;
+    flex: 0 0 auto;
+    width: 140rpx;
+}
+
+form .form-item input {
+    width: 100%;
+    height: 67rpx;
+    padding-left: 10rpx;
+    font-size: 29rpx;
+    border: 1px solid #ddd;
+}
+
+form .form-item button {
+    width: 144rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15rpx;
+    font-size: 26rpx;
+    border: 1px solid #AAAAAA;
+    color: #000;
+    padding: 0;
+}
+
+form .submit-btn {
+    margin-top: 22rpx;
+    border: none;
+    background-color: #FFB147;
+    height: 69rpx;
+    line-height: 69rpx;
+    width: 689rpx;
+    color: #fff;
+    font-size: 36rpx;
+}
+
+form .btn-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30rpx;
+}
+
+form .btn-box .half:first-child {
+    margin-right: 37rpx;
+}
+
+form .img-list {
+    display: flex;
+    line-height: 149rpx;
+    text-align: center;
+    color: #A29F9F;
+    padding-bottom: 24rpx;
+    padding-left: 17rpx;
+}
+
+form .img-list .img-item {
+    width: 148rpx;
+    height: 148rpx;
+    border: 1px solid #DEDEDE;
+    margin-right: 73rpx;
+    position: relative;
+}
+
+form .img-list .img-item image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+form .img-list .img-item .del {
+    width: 24rpx;
+    height: 24rpx;
+    border-radius: 50%;
+    position: absolute;
+    right: -10rpx;
+    top: -10rpx;
+    background-color: #FFB147;
+    color: #fff;
+    line-height: 18rpx;
+    text-align: center;
+}
+
+form .radio-group {
+    padding-left: 20rpx;
+    font-size: 32rpx;
+}
+
+checkbox .wx-checkbox-input {
+    width: 30rpx;
+    height: 30rpx;
+    position: relative;
+    top: -2rpx;
+}

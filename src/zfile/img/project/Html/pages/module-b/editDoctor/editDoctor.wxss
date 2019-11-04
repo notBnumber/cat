@@ -1,0 +1,37 @@
+.container {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.form-box {
+  margin: 40rpx 40rpx;
+}
+
+.form-box .section {
+  height: 80rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items:Center;
+}
+
+input {
+  display: inline-block;
+}
+
+.form-box .section .section-title {
+  width: 150rpx;
+  display: inline-block;
+}
+
+.btn-area {
+
+}
+.btn-area button {
+  margin: 20rpx 0;
+}
+.btn-area .submit {
+  color: #fff;
+}
+.btn-area .delete {
+
+}
