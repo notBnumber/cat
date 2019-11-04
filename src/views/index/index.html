@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <script src="../../msh/js/rem.js"></script>
+  <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="../../msh/css/base.css" media="all">
+  <link rel="stylesheet" href="../../msh/css/index.css" media="all">
+</head>
+<body>
+<!--头部-->
+<div class="header">
+  <div class="left">
+    <span class="logo"></span>
+  </div>
+  <div class="right">
+    <span class="user-icon"></span>
+  </div>
+</div>
+<!--轮播图-->
+<div class="carousel">
+  <div class="layui-carousel" id="test1">
+    <div carousel-item>
+      <img src="../../msh/image/banner@2x.png" alt="">
+      <img src="../../msh/image/banner@2x.png" alt="">
+      <img src="../../msh/image/banner@2x.png" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <p>
+    公司简介公司简介公司简介公司简介公司简介公司简介
+    公司简介公司简介公司简介公司简介公司简介公司简介
+    公司简介公司简介公司简介公司简介公司简介公司简介
+    公司简介公司简介公司简介公司简介公司简介公司简介
+    公司简介
+  </p>
+  <img src="http://img1.imgtn.bdimg.com/it/u=515321644,2945546049&fm=26&gp=0.jpg" alt="">
+</div>
+
+<!--底部-->
+<div class="footer">
+  <div class="top">
+    <div class="logo"></div>
+    <p class="fs-13">服务热线</p>
+    <p class="fs-17">400-XXXXXXXXXX</p>
+    <p class="fs-13">地址：广东省广州市越秀区广州大道中289号</p>
+  </div>
+  <div class="bottom">
+    <p>Copyright   ©  2018  尖猫招聘有限企业 </p>
+    <p>All Rights Reserved 湘ICP备18023906号-1  粤公网安备1101050203XXXX号</p>
+  </div>
+</div>
+
+
+</body>
+<script src="../../layuiadmin/layui/layui.js"></script>
+<script src="../../msh/js/jquery.js"></script>
+<script>
+  layui.use('carousel', function(){
+    var carousel = layui.carousel;
+    //建造实例
+    carousel.render({
+      elem: '#test1',
+      width: '100%', //设置容器宽度
+      height: '100%',
+      arrow: 'none', //箭头默认显示状态
+      indicator: 'inside', //指示器位置
+      //,anim: 'updown' //切换动画方式
+    });
+  });
+</script>
+</html>

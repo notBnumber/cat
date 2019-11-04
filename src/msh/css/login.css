@@ -1,0 +1,198 @@
+.content {
+  width: 100%;
+  height: 100vh;
+  background: url("../image/login_bg@2x.png") no-repeat;
+  background-size: 100% 100%; }
+  .content .header {
+    box-sizing: border-box;
+    width: 100%;
+    height: .50rem;
+    padding: .12rem;
+    display: flex;
+    align-content: center; }
+    .content .header .back-cion {
+      width: .25rem;
+      height: .25rem;
+      background: url("../image/back@2x.png") no-repeat;
+      background-size: 100% 100%; }
+  .content .main {
+    width: 100%;
+    height: 5.87rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .content .main .title {
+      box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      font-size: .18rem;
+      color: #fff;
+      padding-top: .32rem;
+      text-align: center; }
+    .content .main .tab {
+      width: 100%;
+      height: .4rem;
+      margin-top: .7rem;
+      position: relative; }
+      .content .main .tab .tab-title {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-content: center; }
+        .content .main .tab .tab-title li {
+          width: 33.3%;
+          height: 100%;
+          font-size: .15rem;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+        .content .main .tab .tab-title li.tab-active {
+          font-weight: 600; }
+      .content .main .tab .position-line {
+        position: absolute;
+        bottom: 0;
+        width: 33.3%;
+        transition: left .1s linear; }
+        .content .main .tab .position-line .line {
+          width: 25%;
+          height: .02rem;
+          background-color: #fff;
+          margin: 0 auto;
+          border-radius: 1px; }
+    .content .main .form {
+      box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      padding: .4rem .325rem; }
+      .content .main .form .input-group {
+        width: 3.1rem;
+        height: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 3px;
+        background-color: #fff;
+        margin-bottom: .2rem;
+        overflow: hidden; }
+        .content .main .form .input-group .label {
+          width: .5rem;
+          height: .5rem; }
+        .content .main .form .input-group .user-icon {
+          background: url("../image/login_my@2x.png") no-repeat center center;
+          background-size: .2rem .2rem; }
+        .content .main .form .input-group .password-icon {
+          background: url("../image/login_password@2x.png") no-repeat center center;
+          background-size: .2rem .2rem; }
+        .content .main .form .input-group .input {
+          flex: 1;
+          padding: 0 .05rem; }
+        .content .main .form .input-group .close {
+          display: none;
+          width: .5rem;
+          height: .5rem;
+          background: url("../image/input_delay@2x.png") no-repeat center center;
+          background-size: .2rem .2rem; }
+        .content .main .form .input-group .eye-show {
+          width: .5rem;
+          height: .5rem;
+          background: url("../image/input_xs@2x.png") no-repeat center center;
+          background-size: .2rem .2rem; }
+        .content .main .form .input-group .eye-hidden {
+          width: .5rem;
+          height: .5rem;
+          background: url("../image/input_password_unsee@2x.png") no-repeat center center;
+          background-size: .2rem .2rem; }
+        .content .main .form .input-group .code-btn {
+          width: .88rem;
+          height: .35rem;
+          margin-right: .05rem;
+          font-size: .13rem;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #269C9E;
+          border-radius: 2px; }
+      .content .main .form .bottom {
+        width: 3.1rem;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: .4rem; }
+        .content .main .form .bottom .left {
+          display: flex;
+          align-items: center; }
+          .content .main .form .bottom .left .check {
+            width: .11rem;
+            height: .11rem;
+            background: url("../image/rem_w_nor@2x.png") no-repeat;
+            background-size: 100% 100%; }
+          .content .main .form .bottom .left .check-active {
+            width: .11rem;
+            height: .11rem;
+            background: url("../image/rem_w_click@2x.png") no-repeat;
+            background-size: 100% 100%; }
+          .content .main .form .bottom .left .text {
+            font-size: .13rem;
+            color: #C2F4F5;
+            padding-left: .13rem; }
+        .content .main .form .bottom .right {
+          font-size: .13rem;
+          color: #F6D72C; }
+      .content .main .form .to-login {
+        padding-top: .2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .content .main .form .to-login .text {
+          font-size: .15rem;
+          color: #fff; }
+        .content .main .form .to-login .jt {
+          width: .12rem;
+          height: .12rem;
+          background: url("../image/login_go@2x.png") no-repeat;
+          background-size: 100% 100%; }
+      .content .main .form .btn {
+        width: 3.1rem;
+        height: .44rem;
+        background-color: #fff;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .16rem;
+        font-weight: 600;
+        color: #2A9B9D; }
+    .content .main #reset-form {
+      display: none; }
+    .content .main .apply-type {
+      width: 3.1rem;
+      height: auto;
+      display: flex;
+      align-content: center;
+      justify-content: space-between; }
+      .content .main .apply-type .item {
+        align-content: center;
+        display: block;
+        font-size: .13rem;
+        color: #fff; }
+        .content .main .apply-type .item .text-color {
+          color: #F8DF59; }
+  .content .footer {
+    width: 100%;
+    height: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .content .footer a {
+      display: block;
+      width: 100%;
+      height: auto;
+      text-align: center;
+      font-size: .11rem;
+      color: #fff; }
+
+/*# sourceMappingURL=login.css.map */

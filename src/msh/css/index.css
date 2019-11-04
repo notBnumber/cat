@@ -1,0 +1,85 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: .44rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #269C9E; }
+  .header .left {
+    display: flex;
+    align-items: center;
+    padding-left: .2rem; }
+    .header .left .logo {
+      display: inline-block;
+      width: .73rem;
+      height: .18rem;
+      background: url("../image/nav_logo@2x.png") no-repeat;
+      background-size: 100% 100%; }
+  .header .right {
+    display: flex;
+    align-items: center;
+    padding-right: .12rem; }
+    .header .right .user-icon {
+      width: .2rem;
+      height: .2rem;
+      background: url("../image/nav_user@2x.png") no-repeat;
+      background-size: 100% 100%; }
+
+.carousel {
+  width: 3.75rem;
+  height: 1.5rem; }
+
+.main {
+  background-color: #fff; }
+  .main p {
+    padding: .15rem;
+    font-size: .14rem;
+    color: #333; }
+  .main img {
+    width: 100%;
+    height: auto; }
+
+.footer {
+  box-sizing: border-box;
+  width: 100%;
+  height: 1.8rem;
+  background: url("../image/but_bg@2x.png") no-repeat;
+  background-size: 100% 100%; }
+  .footer .top {
+    box-sizing: border-box;
+    width: 100%;
+    height: 1.3rem;
+    padding: .16rem .28rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .footer .top .logo {
+      width: 100%;
+      height: .21rem;
+      background: url("../image/but_logo@2x.png") no-repeat right center;
+      background-size: .81rem .21rem; }
+    .footer .top .fs-13 {
+      font-size: .13rem;
+      color: #fff; }
+    .footer .top .fs-17 {
+      font-size: .17rem;
+      color: #fff; }
+  .footer .bottom {
+    box-sizing: border-box;
+    width: 100%;
+    height: .5rem;
+    padding: 0 .05rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #4CB4B6;
+    overflow: hidden; }
+    .footer .bottom p {
+      font-size: .11rem;
+      color: #fff; }
+
+/*# sourceMappingURL=index.css.map */
