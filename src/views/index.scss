@@ -1,0 +1,105 @@
+.layui-side-menu{
+    .layui-side-scroll{
+        .layui-logo{
+            span{
+                font-size: 0.21rem;
+                font-weight: bold;
+                color: #FFF;
+            }
+        }
+    }
+}
+
+#LAY_app_body{
+    background-color: #FFF;
+    top: 0.5rem;
+    padding-bottom: 0.15rem;
+    .welcome{
+        background-color: #1C6566;
+        width: 100%;
+        font-size: 0.14rem;
+        font-weight:bold;
+        color:rgba(255,255,255,1);
+        height: 0.35rem;
+        line-height: 0.35rem;
+        padding-left: 0.2rem;
+    }
+    .pool_wrap{
+        padding: 0 0.15rem;
+        .title{
+            font-size: 0.15rem;
+            font-weight:bold;
+            color:rgba(34,34,34,1);
+            line-height: 0.5rem;
+        }
+        .items{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .item{
+                // width: 50%;
+                flex-shrink: 0;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width: 1.65rem;
+                height: 1.23rem;
+                position: relative;
+                &:nth-child(2n+1){
+                    margin-right: 0.15rem;
+                }
+                &:nth-child(n+3){
+                    margin-top: 0.15rem;
+                }
+                .name{
+                    font-size: 0.16rem;
+                    line-height: 1;
+                    font-weight: 400;
+                    color:rgba(255,254,254,1);
+                    position: absolute;
+                    top: 0.27rem;
+                    left: 0.2rem;
+                    white-space: nowrap;
+                }
+                .num{
+                    line-height: 1;
+                    font-size: 0.4rem;
+                    font-weight: bold;
+                    color:rgba(255,254,254,1);
+                    position: absolute;
+                    bottom: 0.3rem;
+                    right: 0.35rem;
+                    white-space: nowrap;
+                    // .data_pool_wrap &{
+                    //     font-size: 0.3rem;
+                    //     bottom: 0.29rem;
+                    //     right: 0.17rem;
+                    //     span{
+                    //         font-size: 0.14rem;
+                    //         font-weight: 400;
+                    //         color:rgba(255,254,254,1);
+                    //         line-height: 1;
+                    //     }
+                    // }
+                }
+            }
+        }
+    }
+    .data_pool_wrap{
+        .items{
+            .item{
+                .num{
+                    font-size: 0.3rem;
+                    bottom: 0.29rem;
+                    right: 0.17rem;
+                    span{
+                        font-size: 0.14rem;
+                        font-weight: 400;
+                        color:rgba(255,254,254,1);
+                        line-height: 1;
+                        margin-left: 0.06rem;
+                    }
+                }
+            }
+        }
+    }
+}
